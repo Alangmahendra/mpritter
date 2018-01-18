@@ -5,7 +5,7 @@ const auth = require('../auth/auth')
 
 router.get('/',Post.findAll)
 router.get('/:id',Post.findOne)
+router.get('/allmy',auth.isLogin,Post.findAllMyPost)
 router.post('/',auth.isLogin,Post.add)
-router.get('/mypost',auth.isLogin,Post.findAllMyPost)
 router.delete('/:id',auth.isLogin,Post.remove)
 module.exports=router

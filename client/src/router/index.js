@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 import Login from '@/components/Login'
 import Mypage from '@/components/Mypage'
+import Updateprofile from '@/components/Updateprofile'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/mypage',
       name: 'Mypage',
       component: Mypage
+    },
+    {
+      path: '/editprofile',
+      name: 'Updateprofile',
+      component: Updateprofile
     }
   ]
 })

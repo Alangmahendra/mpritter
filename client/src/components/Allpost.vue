@@ -2,10 +2,6 @@
   <div >
     <b-card :title="list.post"
             :sub-title="list.creator.email">
-        <a href="#"
-           class="card-link">delete</a>
-        <b-link href="#"
-                class="card-link">Another link</b-link>
     </b-card>
   </div>
 </template>
@@ -16,7 +12,6 @@ export default {
   props: ['list'],
   data () {
     return {
-      comments: ''
     }
   },
   methods: {

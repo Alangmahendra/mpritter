@@ -37,7 +37,7 @@ class Post{
   }
 
   static findAllMyPost(req,res){
-    Model.find({creator : req.user._id}).populate('creator').exec((err,rows)=>{
+    Model.find({creator : req.user._id},(err,rows)=>{
       if(err){
         res.status(500).json({message : err})
       }else {

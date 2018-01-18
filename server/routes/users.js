@@ -8,5 +8,6 @@ const midle = require('../helper/image')
 router.post('/signup',User.signup)
 router.post('/signin',User.signin)
 router.put('/editprofile',auth.isLogin,midle.multer.single('profileImg'),midle.sendUploadToGCS,User.edit)
+router.get(`/myprofile`,auth.isLogin)
 
 module.exports = router;
