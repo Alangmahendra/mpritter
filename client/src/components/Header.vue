@@ -15,6 +15,7 @@
           <em>User</em>
         </template>
         <b-dropdown-item href="#" @click="mypage">Myprofile</b-dropdown-item>
+        <b-dropdown-item href="#" @click="Login">Login</b-dropdown-item>
         <b-dropdown-item href="#" @click="signout">Signout</b-dropdown-item>
       </b-nav-item-dropdown>
     </b-navbar-nav>
@@ -44,10 +45,13 @@ export default {
     mypage () {
       let token = localStorage.getItem('token')
       if (token) {
-        router.push({name: 'Myprofile'})
+        router.push({name: 'Mypage'})
       } else {
         router.push({name: 'Login'})
       }
+    },
+    Login () {
+      router.push({name: 'Login'})
     }
   }
 }

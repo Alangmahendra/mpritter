@@ -1,12 +1,12 @@
 <template>
   <b-card>
-    <allgram v-for="list in allPost" :key="list._id" :list="list" @pushcomment="addcomment"/>
+    <allgram v-for="list in allPost" :key="list._id" :list="list"/>
   </b-card>
 </template>
 
 <script>
 import axios from 'axios'
-import allgram from './Allgram'
+import allgram from './Allpost'
 export default {
   name: 'Home',
   components: {allgram},
