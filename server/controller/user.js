@@ -8,13 +8,13 @@ class User{
   static signup(req,res){
     Model.findOne({email : req.body.email},(err,rows)=>{
       if(rows){
-        console.log('email sudah terdaftar')
+        res.send('email sudah terdaftar')
       }else {
         bcrypt.genSalt(10,function(err,salt){
           bcrypt.hash(req.body.password,salt,(err,hash)=>{
             let obj={
               email : req.body.email,
-              password : req.body.password
+              password : hash
             }
             Model.create(obj,function(err,rows){
               if(err){

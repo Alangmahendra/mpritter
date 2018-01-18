@@ -1,7 +1,7 @@
 let mongoose = require('mongoose')
 let Schema = mongoose.Schema
 
-let post = new Schema({
+let postSchema = new Schema({
   creator:{
     type : Schema.Types.ObjectId,
     ref : 'User'
@@ -9,3 +9,5 @@ let post = new Schema({
   post : String
 },{timestamps:{ }})
 
+let postModel = mongoose.model('Post',postSchema)
+module.exports = postModel

@@ -10,7 +10,7 @@ const mongoose = require('mongoose');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
-var users = require('./routes/');
+var post = require('./routes/post');
 
 var app = express();
 
@@ -31,6 +31,7 @@ mongoose.connect('mongodb://localhost/mprit');
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/post', post);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

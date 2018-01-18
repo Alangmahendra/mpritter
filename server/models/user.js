@@ -7,6 +7,6 @@ let userSchema = new Schema({
   profileImg:String,
   username : String
 },{timestamps:{ }})
-let userModel = mongoose.model('user',userSchema)
+let userModel = mongoose.model('User',userSchema)
 
 module.exports = userModel
